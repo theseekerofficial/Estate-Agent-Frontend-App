@@ -26,6 +26,7 @@ const SearchPage = () => {
             if (criteria.dateAfter) {
                 const propDate = new Date(`${property.added.month} ${property.added.day}, ${property.added.year}`);
                 const searchDate = new Date(criteria.dateAfter);
+                searchDate.setHours(0, 0, 0, 0);
                 dateMatch = propDate >= searchDate;
             }
 
