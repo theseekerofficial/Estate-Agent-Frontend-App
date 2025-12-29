@@ -9,6 +9,17 @@
             "description": "Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
             "location": "Petts Wood Road, Petts Wood, Orpington BR5",
             "picture": "images/prop1pic1small.jpg",
+            "images": [
+                "images/sections/prop1/bathroom.jpg",
+                "images/sections/prop1/dining_room.jpg",
+                "images/sections/prop1/hallway.jpg",
+                "images/sections/prop1/kitchen.jpg",
+                "images/sections/prop1/l-room.jpg",
+                "images/sections/prop1/master_bedroom.jpg",
+                "images/sections/prop1/Rear_view.jpg"
+            ],
+            "floorPlan": "https://placehold.co/600x800?text=Floor+Plan+Image",
+            "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.675313065165!2d0.07950461247709263!3d51.39064521910789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ab82cc8f3cb1%3A0xc746da03b0c6c716!2sPetts%20Wood%20Rd%2C%20Petts%20Wood%2C%20Orpington%2C%20UK!5e0!3m2!1sen!2slk!4v1767028230676!5m2!1sen!2slk",
             "url": "properties/prop1.html",
             "added": {
                 "month": "October",
@@ -25,6 +36,16 @@
             "description": "Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
             "location": "Crofton Road Orpington BR6",
             "picture": "images/prop2pic1small.jpg",
+            "images": [
+                "images/sections/prop2/bathroom.jpg",
+                "images/sections/prop2/front.jpg",
+                "images/sections/prop2/home_office.jpg",
+                "images/sections/prop2/Interior.jpg",
+                "images/sections/prop2/kitchen.jpg",
+                "images/sections/prop2/master-bedroom.jpg"
+            ],
+            "floorPlan": "https://placehold.co/600x800?text=Floor+Plan+Image",
+            "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.613147606983!2d0.0693873124762868!3d51.373408120365085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ab6ac2bdc8d1%3A0xb0dde3c09939f924!2sCrofton%20Rd%2C%20Orpington%2C%20UK!5e0!3m2!1sen!2slk!4v1767028356520!5m2!1sen!2slk",
             "url": "properties/prop2.html",
             "added": {
                 "month": "September",
@@ -41,6 +62,17 @@
             "description": "A spacious four-bedroom detached home located in the heart of Bromley. This property features a large garden, a double garage, and a modern open-plan kitchen. Perfect for growing families, it is situated close to top-rated schools and local parks. The master bedroom includes an en-suite, and the living area opens out to a beautiful patio. Recently renovated with high-quality finishes throughout.",
             "location": "High Street, Bromley BR1",
             "picture": "images/prop3pic1small.jpg",
+            "images": [
+                "images/sections/prop3/backyard.jpg",
+                "images/sections/prop3/bathroom.jpg",
+                "images/sections/prop3/bedroom.jpg",
+                "images/sections/prop3/dining_area.jpg",
+                "images/sections/prop3/interior.jpg",
+                "images/sections/prop3/kitchen.jpg",
+                "images/sections/prop3/twin_bedroom.jpg"
+            ],
+            "floorPlan": "https://placehold.co/600x800?text=Floor+Plan+Image",
+            "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.9819719004754!2d0.010342757330249515!3d51.4033859457883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8aa6e62559f07%3A0x7a40d87fea31d354!2sHigh%20St%2C%20Bromley%2C%20UK!5e0!3m2!1sen!2slk!4v1767028399444!5m2!1sen!2slk",
             "url": "properties/prop3.html",
             "added": {
                 "month": "January",
@@ -57,6 +89,16 @@
             "description": "A charming one-bedroom apartment situated in a vibrant area of London. This flat offers a cozy living space, a compact but functional kitchen, and a bright bedroom. Ideal for first-time buyers or professionals working in the city. Excellent transport links nearby, with the tube station just a 5-minute walk away. Low service charges and ground rent.",
             "location": "Camden High Street, London NW1",
             "picture": "images/prop4pic1small.jpg",
+            "images": [
+                "images/sections/prop4/balcony.jpg",
+                "images/sections/prop4/bathroom.jpg",
+                "images/sections/prop4/bedroom.jpg",
+                "images/sections/prop4/exterior_walkway.jpg",
+                "images/sections/prop4/kitchen.jpg",
+                "images/sections/prop4/living_room.jpg"
+            ],
+            "floorPlan": "https://placehold.co/600x800?text=Floor+Plan+Image",
+            "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.6361485579077!2d-0.1446073875159561!3d51.53823310833254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ae03692e859%3A0x986264e82c966591!2sCamden%20High%20St%2C%20London%2C%20UK!5e0!3m2!1sen!2slk!4v1767028532258!5m2!1sen!2slk",
             "url": "properties/prop4.html",
             "added": {
                 "month": "November",
@@ -73,6 +115,17 @@
             "description": "Luxury five-bedroom executive home in a prestigious gated community. This stunning property boasts a cinema room, a triple garage, and a landscaped garden with a water feature. The kitchen is equipped with state-of-the-art appliances, and the bathrooms feature designer fittings. Located near Petts Wood, offering privacy and exclusivity.",
             "location": "Chislehurst Road, Petts Wood, Orpington BR5",
             "picture": "images/prop5pic1small.webp",
+            "images": [
+                "images/sections/prop5/bathroom.jpg",
+                "images/sections/prop5/home_gym.jpg",
+                "images/sections/prop5/home_theater.jpg",
+                "images/sections/prop5/kitchen.jpg",
+                "images/sections/prop5/living_room.jpg",
+                "images/sections/prop5/master_bedroom.jpg",
+                "images/sections/prop5/pool.jpg"
+            ],
+            "floorPlan": "https://placehold.co/600x800?text=Floor+Plan+Image",
+            "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.789266131941!2d0.08697621247699938!3d51.38855101926064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ac8044219559%3A0xf9ced6ba7a10d284!2sChislehurst%20Rd%2C%20Orpington%2C%20UK!5e0!3m2!1sen!2slk!4v1767028445297!5m2!1sen!2slk",
             "url": "properties/prop5.html",
             "added": {
                 "month": "December",
@@ -89,6 +142,16 @@
             "description": "Modern two-bedroom penthouse apartment with stunning views over the city. Features include a wrap-around balcony, floor-to-ceiling windows, and concierge service. The open-plan living area is perfect for entertaining, and the master bedroom comes with a walk-in wardrobe. Situated in Orpington, close to the station for easy commuting.",
             "location": "Station Road, Orpington BR6",
             "picture": "images/prop6pic1small.jpg",
+            "images": [
+                "images/sections/prop6/bathroom.jpg",
+                "images/sections/prop6/bedroom.jpg",
+                "images/sections/prop6/corridor.jpg",
+                "images/sections/prop6/kitchen.jpg",
+                "images/sections/prop6/living_room.jpg",
+                "images/sections/prop6/outdoor_lounge.jpg"
+            ],
+            "floorPlan": "https://placehold.co/600x800?text=Floor+Plan+Image",
+            "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.666602026427!2d0.09122401247623264!3d51.37242552043675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8ac9c275e1043%3A0x52f835a3dcf7602f!2sStation%20Rd%2C%20Orpington%2C%20UK!5e0!3m2!1sen!2slk!4v1767028591070!5m2!1sen!2slk",
             "url": "properties/prop6.html",
             "added": {
                 "month": "February",
@@ -105,6 +168,17 @@
             "description": "A delightful three-bedroom terraced house full of character. This Victorian property retains many original features, including fireplaces and sash windows, while offering modern comforts. The garden is well-maintained and south-facing. Located in a quiet cul-de-sac in Camden, providing a peaceful retreat within the city.",
             "location": "Regents Park Road, London NW1",
             "picture": "images/prop7pic1small.jpg",
+            "images": [
+                "images/sections/prop7/attic_bedroom.jpg",
+                "images/sections/prop7/backyard.jpg",
+                "images/sections/prop7/bathroom.jpg",
+                "images/sections/prop7/kitchen.jpg",
+                "images/sections/prop7/living_room.jpg",
+                "images/sections/prop7/master_bedroom.jpg",
+                "images/sections/prop7/narrow_hallway.jpg"
+            ],
+            "floorPlan": "https://placehold.co/600x800?text=Floor+Plan+Image",
+            "googleMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.2889559869584!2d-0.1436098840282124!3d51.50796391850329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604d6023d573d%3A0xb69d44c79f97204!2sRegent%20St%2C%20London!5e0!3m2!1sen!2suk!4v1614000000000!5m2!1sen!2suk",
             "url": "properties/prop7.html",
             "added": {
                 "month": "March",
