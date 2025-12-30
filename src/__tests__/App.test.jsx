@@ -1,10 +1,10 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect, vi } from 'vitest';
-import { BrowserRouter } from 'react-router-dom';
 import SearchPage from '../pages/SearchPage';
+import { BrowserRouter } from 'react-router-dom';
+import { describe, it, expect, vi } from 'vitest';
 import PropertyCard from '../components/PropertyCard';
 import { FavoritesProvider } from '../context/FavoritesContext';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 vi.mock('@hello-pangea/dnd', () => ({
     DragDropContext: ({ children }) => <div>{children}</div>,
