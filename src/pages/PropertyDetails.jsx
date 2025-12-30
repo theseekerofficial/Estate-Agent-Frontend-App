@@ -14,14 +14,12 @@ const PropertyDetails = () => {
     if (!property) {
         return <div className="container">Property not found</div>;
     }
+    const allImages = [property.picture, ...(property.images || [])];
 
-    const galleryImages = property.images
-        ? property.images.map(img => {
-            const fixedPath = img.startsWith('/') ? img : `/${img}`;
-            return { original: fixedPath, thumbnail: fixedPath };
-        })
-        : [{ original: property.picture, thumbnail: property.picture }];
-    console.log("JSON Map Link:", property.googleMap);
+    const galleryImages = allImages.map(img => {
+        const fixedPath = img.startsWith('/') ? img : `/${img}`;
+        return { original: fixedPath, thumbnail: fixedPath };
+    });
     return (
         <div className="property-details-container" style={{ maxWidth: '1000px', margin: '0 auto', padding: '20px' }}>
             <Link to="/" className="back-link" style={{ display: 'inline-block', marginBottom: '20px' }}>
@@ -58,9 +56,13 @@ const PropertyDetails = () => {
                     <TabPanel>
                         <div className="tab-content" style={{ padding: '20px', background: '#fff', border: '1px solid #ddd', borderTop: 'none', textAlign: 'center' }}>
                             {property.floorPlan ? (
-                                <img src={property.floorPlan} alt="Floor Plan" style={{ maxWidth: '100%' }} />
+                                <img
+                                    src={property.floorPlan}
+                                    alt="Property Floor Plan"
+                                    style={{ maxWidth: '100%', height: 'auto', border: '1px solid #eee' }}
+                                />
                             ) : (
-                                <p>No floor plan available.</p>
+                                <p>No floor plan available for this property.</p>
                             )}
                         </div>
                     </TabPanel>
