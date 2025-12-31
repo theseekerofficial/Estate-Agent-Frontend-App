@@ -24,14 +24,19 @@
 }
 
 .property-header h1 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    font-weight: 800;
+    font-family: var(--font-heading), sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.75rem);
+    font-weight: 700;
+    font-style: italic;
     color: var(--text-main);
     margin-bottom: var(--spacing-sm);
+    letter-spacing: -0.02em;
 }
 
 .property-header h2 {
+    font-family: var(--font-body), sans-serif;
     font-size: 2rem;
+    font-weight: 700;
     color: var(--primary);
     margin-bottom: var(--spacing-xs);
 }
@@ -94,9 +99,15 @@
 }
 
 .tab-content h3 {
+    font-family: var(--font-heading), sans-serif;
     font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
     margin-bottom: var(--spacing-md);
     color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
 }
 
 .tab-content p {

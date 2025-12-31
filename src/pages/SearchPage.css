@@ -5,8 +5,8 @@
 }
 
 .filter-sidebar {
-    flex: 0 0 280px;
-    min-width: 280px;
+    flex: 0 0 320px;
+    min-width: 320px;
 }
 
 .filter-sidebar .search-form {
@@ -20,13 +20,16 @@
 }
 
 .search-results-section h1 {
-    font-size: 2rem;
-    font-weight: 800;
+    font-family: var(--font-heading), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-style: italic;
     margin-bottom: var(--spacing-lg);
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
 }
 
 .property-list-grid {

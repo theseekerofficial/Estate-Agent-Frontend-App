@@ -8,13 +8,16 @@
 }
 
 .search-form h3 {
+    font-family: var(--font-heading), sans-serif;
     margin-bottom: var(--spacing-lg);
     color: var(--text-main);
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.35rem;
+    font-weight: 600;
+    font-style: italic;
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
+    letter-spacing: 0.01em;
 }
 
 .label-icon {
@@ -34,8 +37,10 @@
     display: block;
     margin-bottom: var(--spacing-sm);
     color: var(--text-muted);
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .form-group select,

@@ -64,10 +64,12 @@
 }
 
 .property-info h3 {
+    font-family: var(--font-heading), sans-serif;
     margin-bottom: var(--spacing-xs);
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: var(--text-main);
-    font-weight: 700;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .price {
