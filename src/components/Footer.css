@@ -30,6 +30,12 @@
     margin-bottom: var(--spacing-md);
 }
 
+.footer-logo img.logo-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .brand p {
     font-size: 0.9rem;
     max-width: 300px;

@@ -1,6 +1,7 @@
 import Slider from 'rc-slider';
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
+import { FaHome, FaPoundSign, FaBed, FaMapMarkerAlt, FaCalendarAlt, FaSearch } from 'react-icons/fa';
 
 import './SearchForm.css';
 import 'rc-slider/assets/index.css';
@@ -29,10 +30,10 @@ const SearchForm = ({ onSearch }) => {
 
     return (
         <form onSubmit={handleSubmit} className="search-form">
-            <h3>Filter Properties</h3>
+            <h3><FaSearch /> Filter Properties</h3>
 
             <div className="form-group">
-                <label>Type:</label>
+                <label><FaHome className="label-icon" /> Type:</label>
                 <select value={type} onChange={(e) => setType(e.target.value)}>
                     <option value="any">Any</option>
                     <option value="House">House</option>
@@ -41,8 +42,8 @@ const SearchForm = ({ onSearch }) => {
             </div>
 
             <div className="form-group">
-                <label>Price Range: £{priceRange[0].toLocaleString()} - £{priceRange[1].toLocaleString()}</label>
-                <div style={{ marginTop: '10px' }}>
+                <label><FaPoundSign className="label-icon" /> Price Range: £{priceRange[0].toLocaleString()} - £{priceRange[1].toLocaleString()}</label>
+                <div className="slider-container">
                     <Slider
                         range
                         min={0}
@@ -56,7 +57,7 @@ const SearchForm = ({ onSearch }) => {
             </div>
 
             <div className="form-group">
-                <label>Bedrooms: </label>
+                <label><FaBed className="label-icon" /> Bedrooms:</label>
                 <div className="bedroom-inputs">
                     <input
                         type="number"
@@ -75,7 +76,7 @@ const SearchForm = ({ onSearch }) => {
             </div>
 
             <div className="form-group">
-                <label>Postcode Area: </label>
+                <label><FaMapMarkerAlt className="label-icon" /> Postcode Area:</label>
                 <input
                     type="text"
                     placeholder="e.g. BR1"
@@ -85,7 +86,7 @@ const SearchForm = ({ onSearch }) => {
             </div>
 
             <div className="form-group">
-                <label>Added After:</label>
+                <label><FaCalendarAlt className="label-icon" /> Added After:</label>
                 <DatePicker
                     selected={dateAfter}
                     onChange={(date) => setDateAfter(date)}
@@ -96,7 +97,7 @@ const SearchForm = ({ onSearch }) => {
             </div>
 
             <button type="submit" className="search-submit-btn">
-                Update Results
+                <FaSearch /> Update Results
             </button>
         </form>
     );

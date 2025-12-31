@@ -76,9 +76,12 @@ const SearchPage = () => {
         <DragDropContext onDragEnd={onDragEnd}>
             <div className="search-page">
 
+                <aside className="filter-sidebar">
+                    <SearchForm onSearch={handleSearch} />
+                </aside>
+
                 <div className="search-results-section">
                     <h1>Property Search</h1>
-                    <SearchForm onSearch={handleSearch} />
 
                     <Droppable droppableId="results-list" direction="vertical">
                         {(provided) => (
@@ -101,6 +104,7 @@ const SearchPage = () => {
                     </Droppable>
                 </div>
 
+                {/* Right Sidebar - Favorites */}
                 <div className="favorites-sidebar">
                     <Droppable droppableId="favorites-zone">
                         {(provided, snapshot) => (

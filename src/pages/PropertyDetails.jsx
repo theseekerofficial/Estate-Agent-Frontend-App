@@ -3,6 +3,7 @@ import ImageGallery from 'react-image-gallery';
 import { useParams, Link } from 'react-router-dom';
 import propertiesData from '../data/properties.json';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { FaArrowLeft, FaFileAlt, FaLayerGroup, FaMapMarkedAlt, FaBed, FaMapMarkerAlt, FaPoundSign, FaCalendarAlt, FaCheck } from 'react-icons/fa';
 
 import './PropertyDetails.css';
 import 'react-tabs/style/react-tabs.css';
@@ -25,13 +26,13 @@ const PropertyDetails = () => {
     return (
         <div className="property-details-container">
             <Link to="/" className="back-link">
-                &larr; Back to Results
+                <FaArrowLeft /> Back to Results
             </Link>
 
             <div className="property-header">
-                <h1>{property.type} - {property.bedrooms} Bedrooms</h1>
-                <h2>£{property.price.toLocaleString()}</h2>
-                <p className="location">{property.location}</p>
+                <h1><FaBed /> {property.type} - {property.bedrooms} Bedrooms</h1>
+                <h2><FaPoundSign /> {property.price.toLocaleString()}</h2>
+                <p className="location"><FaMapMarkerAlt /> {property.location}</p>
             </div>
 
             <div className="gallery-section">
@@ -41,17 +42,17 @@ const PropertyDetails = () => {
             <div className="info-tabs">
                 <Tabs>
                     <TabList>
-                        <Tab>Description</Tab>
-                        <Tab>Floor Plan</Tab>
-                        <Tab>Map</Tab>
+                        <Tab><FaFileAlt /> Description</Tab>
+                        <Tab><FaLayerGroup /> Floor Plan</Tab>
+                        <Tab><FaMapMarkedAlt /> Map</Tab>
                     </TabList>
 
                     <TabPanel>
                         <div className="tab-content">
-                            <h3>Property Description</h3>
+                            <h3><FaFileAlt /> Property Description</h3>
                             <p>{property.description}</p>
-                            <p><strong>Tenure:</strong> {property.tenure}</p>
-                            <p><strong>Added:</strong> {property.added.day} {property.added.month} {property.added.year}</p>
+                            <p><FaCheck className="info-icon" /> <strong>Tenure:</strong> {property.tenure}</p>
+                            <p><FaCalendarAlt className="info-icon" /> <strong>Added:</strong> {property.added.day} {property.added.month} {property.added.year}</p>
                         </div>
                     </TabPanel>
 

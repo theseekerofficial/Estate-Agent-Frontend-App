@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Draggable } from '@hello-pangea/dnd';
 import { useFavorites } from '../hooks/useFavorites';
 import { DraggablePortal } from './DraggablePortal';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const PropertyCard = ({ property, index, isFavoriteItem }) => {
     const { addFavorite, removeFavorite, favorites } = useFavorites();
@@ -42,15 +43,17 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
                             onClick={toggleFavorite}
                             title={isFav ? "Remove" : "Add"}
                         >
-                            {isFav ? '❤️' : '🤍'}
+                            {isFav ? <FaHeart className="fav-icon filled" /> : <FaRegHeart className="fav-icon" />}
                         </button>
 
-                        <img
-                            src={property.picture}
-                            alt={property.type}
-                            className="property-image"
-                            onError={(e) => { e.target.src = 'https://placehold.co/600x400?text=No+Image' }}
-                        />
+                        <div className="property-image-container">
+                            <img
+                                src={property.picture}
+                                alt={property.type}
+                                className="property-image"
+                                onError={(e) => { e.target.src = 'https://placehold.co/600x400?text=No+Image' }}
+                            />
+                        </div>
 
                         <div className="property-info">
                             <h3>{property.type} - {property.bedrooms} Bed</h3>

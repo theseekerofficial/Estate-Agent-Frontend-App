@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaHome } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -8,8 +8,8 @@ const Footer = () => {
             <div className="container footer-content">
                 <div className="footer-section brand">
                     <div className="footer-logo">
-                        <FaHome size={28} className="logo-icon" />
-                        <span>EstateAgent</span>
+                        <img src="/favicon.png" alt="Prime State Logo" className="logo-icon" />
+                        <span>Prime State</span>
                     </div>
                     <p>Find your dream home with the most trusted agency in the country. We make real estate simple and accessible.</p>
                 </div>
@@ -46,7 +46,7 @@ const Footer = () => {
 
             <div className="footer-bottom">
                 <div className="container">
-                    <p>&copy; {new Date().getFullYear()} Estate Agent App. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Prime State. All rights reserved.</p>
                 </div>
             </div>
         </footer>
