@@ -86,6 +86,7 @@ const SearchPage = () => {
                     <Droppable droppableId="results-list" direction="vertical">
                         {(provided) => (
                             <Motion.div
+                                key={filteredProperties.map(p => p.id).join('-')}
                                 className="property-list-grid"
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}

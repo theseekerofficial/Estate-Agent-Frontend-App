@@ -141,11 +141,9 @@
     border-color: var(--primary) !important;
     background-color: var(--bg-surface) !important;
     opacity: 1 !important;
-    transition: all var(--transition-bounce) !important;
 }
 
 .rc-slider-handle:hover {
-    transform: scale(1.2) !important;
     box-shadow: var(--shadow-glow) !important;
 }
 
