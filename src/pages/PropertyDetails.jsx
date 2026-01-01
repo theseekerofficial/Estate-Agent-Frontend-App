@@ -41,7 +41,7 @@ const PropertyDetails = () => {
 
             <div className="info-tabs">
                 <Tabs>
-                    <TabList>
+                    <TabList style={{ overflowY: 'hidden' }}>
                         <Tab><FaFileAlt /> Description</Tab>
                         <Tab><FaLayerGroup /> Floor Plan</Tab>
                         <Tab><FaMapMarkedAlt /> Map</Tab>
