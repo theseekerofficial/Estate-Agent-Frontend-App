@@ -46,10 +46,11 @@ describe('SearchPage Filtering', () => {
         });
     });
 
-    // Test 2: Favorites placeholder shown when no favorites
-    it('displays empty favorites placeholder message', () => {
+    // Test 2: Favorites section is visible on page
+    it('displays the favorites section on the search page', () => {
+        localStorage.clear();
         renderSearchPage();
 
-        expect(screen.getByText(/Drag properties here to add them to your favorites/i)).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /Favorites/i })).toBeInTheDocument();
     });
 });

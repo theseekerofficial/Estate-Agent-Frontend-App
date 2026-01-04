@@ -280,6 +280,7 @@
     font-size: 1.1rem;
 }
 
+/* Tablet Landscape (1200px and below) */
 @media (max-width: 1200px) {
     .property-details-layout {
         grid-template-columns: 1fr;
@@ -291,44 +292,219 @@
     }
 
     .gallery-sticky .image-gallery-slide img {
-        height: 400px;
+        height: 450px;
+    }
+
+    .property-quick-info {
+        padding: var(--spacing-xl);
+    }
+}
+
+/* Tablet Portrait (992px and below) */
+@media (max-width: 992px) {
+    .property-details-container {
+        padding: var(--spacing-md);
+    }
+
+    .gallery-sticky .image-gallery-slide img {
+        height: 380px;
+    }
+
+    .property-price {
+        font-size: 2rem;
+    }
+
+    .property-location {
+        font-size: 1rem;
+    }
+
+    .tab-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .description-text {
+        font-size: 1rem;
+        line-height: 1.7;
     }
 }
 
 @media (max-width: 768px) {
     .property-details-container {
-        padding: var(--spacing-md);
+        padding: var(--spacing-sm);
+    }
+
+    .back-link {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.9rem;
+        margin-bottom: var(--spacing-md);
     }
 
     .gallery-sticky .image-gallery-slide img {
         height: 280px;
     }
 
+    .gallery-sticky .image-gallery-thumbnails-wrapper {
+        display: none;
+    }
+
     .property-quick-info {
-        padding: var(--spacing-lg);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-lg);
+    }
+
+    .quick-info-badges {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info-badge {
+        font-size: 0.8rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
     }
 
     .property-price {
         font-size: 1.75rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .property-location {
+        font-size: 0.95rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .react-tabs__tab-list {
+        padding: var(--spacing-xs);
+        border-radius: var(--radius-md) var(--radius-md) 0 0;
     }
 
     .react-tabs__tab {
         padding: var(--spacing-sm) var(--spacing-md) !important;
         flex: 1;
         justify-content: center;
+        font-size: 0.85rem;
+        min-height: 44px;
+    }
+
+    .react-tabs__tab svg {
+        font-size: 1rem;
+    }
+
+    .tab-content {
+        padding: var(--spacing-md);
+        min-height: 180px;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    }
+
+    .tab-content h3 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .description-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .property-meta {
+        padding: var(--spacing-md);
+    }
+
+    .property-meta p {
+        font-size: 0.9rem;
+    }
+
+    .floor-plan-image {
+        border-radius: var(--radius-md);
+    }
+
+    .no-content-message {
+        padding: var(--spacing-xl);
+    }
+
+    .no-content-message svg {
+        font-size: 2.5rem;
+    }
+
+    .no-content-message p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .property-details-container {
+        padding: var(--spacing-xs);
+    }
+
+    .back-link {
+        font-size: 0.85rem;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .gallery-sticky .image-gallery-slide img {
+        height: 220px;
+    }
+
+    .gallery-sticky {
+        border-radius: var(--radius-md);
+    }
+
+    .property-quick-info {
+        padding: var(--spacing-sm);
+    }
+
+    .quick-info-badges {
+        gap: var(--spacing-xs);
+    }
+
+    .info-badge {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .property-price {
+        font-size: 1.5rem;
+    }
+
+    .property-location {
+        font-size: 0.85rem;
+    }
+
+    .react-tabs__tab {
+        padding: var(--spacing-xs) var(--spacing-sm) !important;
+        font-size: 0.75rem;
+        gap: 4px;
+    }
+
+    .react-tabs__tab svg {
         font-size: 0.9rem;
     }
 
     .tab-content {
-        padding: var(--spacing-lg);
-        min-height: 200px;
+        padding: var(--spacing-sm);
+        min-height: 150px;
     }
 
-    .quick-info-badges {
-        flex-direction: column;
+    .tab-content h3 {
+        font-size: 1rem;
     }
 
-    .info-badge {
-        justify-content: center;
+    .description-text {
+        font-size: 0.9rem;
+    }
+
+    .property-meta {
+        padding: var(--spacing-sm);
+    }
+
+    .property-meta p {
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+    }
+
+    .tab-content.no-padding iframe {
+        height: 300px;
     }
 }
