@@ -19,3 +19,13 @@
     background-color: var(--primary-hover);
     box-shadow: var(--shadow-xl);
 }
+
+@media (max-width: 600px) {
+    .theme-toggle {
+        display: none;
+    }
+
+    .header-theme-toggle .theme-toggle {
+        display: flex;
+    }
+}

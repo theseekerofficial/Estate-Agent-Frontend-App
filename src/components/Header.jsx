@@ -1,4 +1,5 @@
 import React from 'react';
+import ThemeToggle from './ThemeToggle';
 import '../styles/components/Header.css';
 import { FaSearch } from 'react-icons/fa';
 
@@ -18,6 +19,9 @@ const Header = () => {
                 <div className="hero-tagline">
                     <FaSearch className="tagline-icon" />
                     <span>Discover exceptional properties tailored to your lifestyle</span>
+                </div>
+                <div className="header-theme-toggle">
+                    <ThemeToggle />
                 </div>
             </div>
         </header>
