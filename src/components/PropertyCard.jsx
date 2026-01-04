@@ -1,3 +1,4 @@
+// Property card component
 import { Link } from 'react-router-dom';
 import { Draggable } from '@hello-pangea/dnd';
 import '../styles/components/PropertyCard.css';
@@ -6,10 +7,12 @@ import { useFavorites } from '../hooks/useFavorites';
 import { DraggablePortal } from './DraggablePortal';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
+// Draggable property card
 const PropertyCard = ({ property, index, isFavoriteItem }) => {
     const { addFavorite, removeFavorite, favorites } = useFavorites();
     const [isMobile, setIsMobile] = useState(false);
 
+    // Detect mobile devices
     useEffect(() => {
         const checkMobile = () => {
             setIsMobile(window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window);
@@ -19,8 +22,10 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
 
+    // Check if favorited
     const isFav = favorites.some(fav => fav.id === property.id);
 
+    // Toggle favorite status
     const toggleFavorite = (e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -31,6 +36,7 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
         }
     };
 
+    // Unique ID for drag tracking
     const draggableId = isFavoriteItem ? `fav-${property.id}` : property.id;
 
     return (
@@ -49,6 +55,7 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
                             }),
                         }}
                     >
+                        {/* Favorite button */}
                         <button
                             className="fav-btn"
                             onClick={toggleFavorite}
@@ -57,6 +64,7 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
                             {isFav ? <FaHeart className="fav-icon filled" /> : <FaRegHeart className="fav-icon" />}
                         </button>
 
+                        {/* Property image */}
                         <div className="property-image-container">
                             <img
                                 src={property.picture}
@@ -66,6 +74,7 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
                             />
                         </div>
 
+                        {/* Card info section */}
                         <div className="property-info">
                             <h3>{property.type} - {property.bedrooms} Bed</h3>
                             <p className="price">£{property.price.toLocaleString()}</p>

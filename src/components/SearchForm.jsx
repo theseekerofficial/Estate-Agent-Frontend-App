@@ -1,3 +1,4 @@
+// Search filter form
 import Slider from 'rc-slider';
 import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
@@ -7,7 +8,9 @@ import '../styles/components/SearchForm.css';
 import 'rc-slider/assets/index.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
+// Filter panel component
 const SearchForm = ({ onSearch }) => {
+    // Form state
     const [type, setType] = useState('any');
     const [priceRange, setPriceRange] = useState([0, 1000000]);
     const [minBedrooms, setMinBedrooms] = useState(0);
@@ -15,6 +18,7 @@ const SearchForm = ({ onSearch }) => {
     const [postcode, setPostcode] = useState('');
     const [dateAfter, setDateAfter] = useState(null);
 
+    // Submit filters
     const handleSubmit = (e) => {
         e.preventDefault();
         onSearch({
@@ -28,6 +32,7 @@ const SearchForm = ({ onSearch }) => {
         });
     };
 
+    // Reset all filters
     const handleReset = () => {
         setType('any');
         setPriceRange([0, 1000000]);
@@ -50,6 +55,7 @@ const SearchForm = ({ onSearch }) => {
         <form onSubmit={handleSubmit} className="search-form">
             <h3><FaSearch /> Filter Properties</h3>
 
+            {/* Property type */}
             <div className="form-group">
                 <label><FaHome className="label-icon" /> Type:</label>
                 <select value={type} onChange={(e) => setType(e.target.value)}>
@@ -59,6 +65,7 @@ const SearchForm = ({ onSearch }) => {
                 </select>
             </div>
 
+            {/* Price range slider */}
             <div className="form-group">
                 <label><FaPoundSign className="label-icon" /> Price Range: £{priceRange[0].toLocaleString()} - £{priceRange[1].toLocaleString()}</label>
                 <div className="slider-container">
@@ -74,6 +81,7 @@ const SearchForm = ({ onSearch }) => {
                 </div>
             </div>
 
+            {/* Bedroom count */}
             <div className="form-group">
                 <label><FaBed className="label-icon" /> Bedrooms:</label>
                 <div className="bedroom-inputs">
@@ -93,6 +101,7 @@ const SearchForm = ({ onSearch }) => {
                 </div>
             </div>
 
+            {/* Postcode filter */}
             <div className="form-group">
                 <label><FaMapMarkerAlt className="label-icon" /> Postcode Area:</label>
                 <input
@@ -103,6 +112,7 @@ const SearchForm = ({ onSearch }) => {
                 />
             </div>
 
+            {/* Date filter */}
             <div className="form-group">
                 <label><FaCalendarAlt className="label-icon" /> Added After:</label>
                 <DatePicker
@@ -114,6 +124,7 @@ const SearchForm = ({ onSearch }) => {
                 />
             </div>
 
+            {/* Action buttons */}
             <div className="search-form-buttons">
                 <button type="submit" className="search-submit-btn">
                     <FaSearch /> Update Results

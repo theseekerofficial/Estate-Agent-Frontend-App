@@ -1,9 +1,11 @@
+// Theme toggle component
 import React from 'react';
 import '../styles/components/ThemeToggle.css';
 import { motion as Motion } from 'framer-motion';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import { useTheme } from '../context/ThemeContext';
 
+// Animated theme switch
 const ThemeToggle = () => {
     const { theme, toggleTheme } = useTheme();
 

@@ -1,3 +1,6 @@
+/* Search page layout */
+
+/* Three column flex layout */
 .search-page {
     display: flex;
     gap: var(--spacing-xl);
@@ -7,21 +10,25 @@
     box-sizing: border-box;
 }
 
+/* Left filter panel */
 .filter-sidebar {
     flex: 0 0 320px;
     min-width: 320px;
 }
 
+/* Sticky filter form */
 .filter-sidebar .search-form {
     position: sticky;
     top: var(--spacing-xl);
 }
 
+/* Center results area */
 .search-results-section {
     flex: 1;
     min-width: 0;
 }
 
+/* Page title */
 .search-results-section h1 {
     font-family: var(--font-heading), sans-serif;
     font-size: 2.5rem;
@@ -37,6 +44,7 @@
     animation: fadeInUp 0.5s ease-out, gradientShift 6s ease infinite;
 }
 
+/* Property cards grid */
 .property-list-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -44,11 +52,13 @@
     width: 100%;
 }
 
+/* Right favorites panel */
 .favorites-sidebar {
     flex: 0 0 320px;
     min-width: 320px;
 }
 
+/* Favorites drop zone */
 .favorites-sidebar-content {
     background-color: var(--bg-surface);
     border: 2px dashed var(--border-color);
@@ -62,6 +72,7 @@
     animation: slideInRight 0.5s ease-out;
 }
 
+/* Active drag highlight */
 .favorites-sidebar-content.dragging-over {
     background-color: var(--bg-surface-elevated);
     border-color: var(--primary);
@@ -70,6 +81,7 @@
     transform: scale(1.01);
 }
 
+/* Favorites header bar */
 .favorites-header {
     display: flex;
     justify-content: space-between;
@@ -86,6 +98,7 @@
     font-style: italic;
 }
 
+/* Clear all button */
 .clear-btn {
     background: linear-gradient(135deg, #ef4444, #dc2626);
     color: white;
@@ -106,6 +119,7 @@
     transform: translateY(0);
 }
 
+/* Empty state placeholder */
 .favorites-placeholder {
     color: var(--text-muted);
     text-align: center;
@@ -119,11 +133,13 @@
     animation: pulse 3s ease-in-out infinite;
 }
 
+/* Large tablet breakpoint */
 @media (max-width: 1200px) {
     .search-page {
         flex-wrap: wrap;
     }
 
+    /* Full width filter */
     .filter-sidebar {
         flex: 0 0 100%;
         max-width: 100%;
@@ -143,7 +159,10 @@
     }
 }
 
+/* Tablet breakpoint */
 @media (max-width: 900px) {
+
+    /* Stack vertically */
     .search-page {
         flex-direction: column;
         align-items: center;
@@ -172,6 +191,7 @@
         font-size: 2rem;
     }
 
+    /* Allow touch scroll */
     .property-list-grid {
         touch-action: pan-y;
     }
@@ -186,7 +206,10 @@
     }
 }
 
+/* Mobile breakpoint */
 @media (max-width: 768px) {
+
+    /* Disable drag on touch */
     .property-card {
         touch-action: pan-y;
         user-select: none;
@@ -206,6 +229,7 @@
         font-size: 1.1rem;
     }
 
+    /* Larger touch target */
     .fav-btn {
         width: 48px;
         height: 48px;

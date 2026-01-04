@@ -1,19 +1,24 @@
+// Favorites context provider
 import React, { createContext, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
 const FavoritesContext = createContext(null);
 export default FavoritesContext
 
+// Wrap app for favorites
 export const FavoritesProvider = ({ children }) => {
+    // Load from localStorage
     const [favorites, setFavorites] = useState(() => {
         const saved = localStorage.getItem('favorites');
         return saved ? JSON.parse(saved) : [];
     });
 
+    // Persist on change
     useEffect(() => {
         localStorage.setItem('favorites', JSON.stringify(favorites));
     }, [favorites]);
 
+    // Add to favorites
     const addFavorite = (property) => {
         if (!favorites.some(fav => fav.id === property.id)) {
             setFavorites([...favorites, property]);
@@ -23,10 +28,12 @@ export const FavoritesProvider = ({ children }) => {
         }
     };
 
+    // Remove from favorites
     const removeFavorite = (id) => {
         setFavorites(favorites.filter(fav => fav.id !== id));
     };
 
+    // Clear all favorites
     const clearFavorites = () => {
         setFavorites([]);
     };

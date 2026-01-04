@@ -1,3 +1,4 @@
+// Search page component
 import '../styles/pages/SearchPage.css';
 import React, { useState } from 'react';
 import SearchForm from '../components/SearchForm';
@@ -7,11 +8,13 @@ import { useFavorites } from '../hooks/useFavorites';
 import { motion as Motion } from 'framer-motion';
 import { DragDropContext, Droppable } from '@hello-pangea/dnd';
 
+// Main search page
 const SearchPage = () => {
     const [allProperties] = useState(propertiesData.properties);
     const [filteredProperties, setFilteredProperties] = useState(propertiesData.properties);
     const { favorites, addFavorite, removeFavorite, clearFavorites } = useFavorites();
 
+    // Filter properties
     const handleSearch = (criteria) => {
         const results = allProperties.filter(property => {
             const typeMatch = criteria.type === 'any' || property.type === criteria.type;
@@ -32,6 +35,7 @@ const SearchPage = () => {
         setFilteredProperties(results);
     };
 
+    // Stagger animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -50,9 +54,11 @@ const SearchPage = () => {
         }
     };
 
+    // Handle drag events
     const onDragEnd = (result) => {
         const { source, destination, draggableId } = result;
 
+        // Drop outside any zone
         if (!destination) {
             if (source.droppableId === 'favorites-zone') {
                 const realId = draggableId.replace('fav-', '');
@@ -61,11 +67,13 @@ const SearchPage = () => {
             return;
         }
 
+        // Drag to favorites
         if (source.droppableId === 'results-list' && destination.droppableId === 'favorites-zone') {
             const property = allProperties.find(p => p.id === draggableId);
             if (property) addFavorite(property);
         }
 
+        // Drag out of favorites
         if (source.droppableId === 'favorites-zone' && destination.droppableId !== 'favorites-zone') {
             const realId = draggableId.replace('fav-', '');
             removeFavorite(realId);
@@ -76,10 +84,12 @@ const SearchPage = () => {
         <DragDropContext onDragEnd={onDragEnd}>
             <div className="search-page">
 
+                {/* Left sidebar - filters */}
                 <aside className="filter-sidebar">
                     <SearchForm onSearch={handleSearch} />
                 </aside>
 
+                {/* Center - results grid */}
                 <div className="search-results-section">
                     <h1>Property Search</h1>
 
@@ -105,7 +115,7 @@ const SearchPage = () => {
                     </Droppable>
                 </div>
 
-                {/* Right Sidebar - Favorites */}
+                {/* Right sidebar - favorites */}
                 <div className="favorites-sidebar">
                     <Droppable droppableId="favorites-zone">
                         {(provided, snapshot) => (
@@ -123,6 +133,7 @@ const SearchPage = () => {
                                     )}
                                 </div>
 
+                                {/* Empty or list */}
                                 {favorites.length === 0 ? (
                                     <p className="favorites-placeholder">Drag properties here or click `❤️` to add them to your favorites.</p>
                                 ) : (

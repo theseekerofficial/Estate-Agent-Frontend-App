@@ -1,11 +1,14 @@
+// Footer component
 import React from 'react';
 import '../styles/components/Footer.css';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
+// Site footer
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="container footer-content">
+                {/* Brand section */}
                 <div className="footer-section brand">
                     <div className="footer-logo">
                         <img src="/favicon.png" alt="Prime State Logo" className="logo-icon" />
@@ -14,6 +17,7 @@ const Footer = () => {
                     <p>Find your dream home with the most trusted agency in the country. We make real estate simple and accessible.</p>
                 </div>
 
+                {/* Quick links */}
                 <div className="footer-section links">
                     <h4>Quick Links</h4>
                     <ul>
@@ -24,6 +28,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
+                {/* Legal links */}
                 <div className="footer-section links">
                     <h4>Legal</h4>
                     <ul>
@@ -33,6 +38,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
+                {/* Social media links */}
                 <div className="footer-section social">
                     <h4>Follow Us</h4>
                     <div className="social-icons">
@@ -44,6 +50,7 @@ const Footer = () => {
                 </div>
             </div>
 
+            {/* Copyright bar */}
             <div className="footer-bottom">
                 <div className="container">
                     <p>&copy; {new Date().getFullYear()} Prime State. All rights reserved.</p>

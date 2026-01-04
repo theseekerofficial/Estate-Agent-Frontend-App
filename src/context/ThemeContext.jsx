@@ -1,8 +1,11 @@
+// Theme context provider
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext();
 
+// Wrap app for theming
 export const ThemeProvider = ({ children }) => {
+    // Get saved or system theme
     const getInitialTheme = () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
@@ -13,11 +16,13 @@ export const ThemeProvider = ({ children }) => {
 
     const [theme, setTheme] = useState(getInitialTheme);
 
+    // Apply and persist theme
     useEffect(() => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
     }, [theme]);
 
+    // Switch between themes
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
     };

@@ -1,3 +1,4 @@
+// Property details page
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import { useParams, Link } from 'react-router-dom';
@@ -9,15 +10,18 @@ import '../styles/pages/PropertyDetails.css';
 import 'react-tabs/style/react-tabs.css';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
+// Single property view
 const PropertyDetails = () => {
     const { id } = useParams();
     const property = propertiesData.properties.find(p => p.id === id);
 
+    // Handle not found
     if (!property) {
         return <div className="container">Property not found</div>;
     }
-    const allImages = [property.picture, ...(property.images || [])];
 
+    // Combine all images
+    const allImages = [property.picture, ...(property.images || [])];
     const galleryImages = allImages.map(img => {
         const fixedPath = (img.startsWith('/') || img.startsWith('http')) ? img : `/${img}`;
         return { original: fixedPath, thumbnail: fixedPath };
@@ -25,11 +29,13 @@ const PropertyDetails = () => {
 
     return (
         <div className="property-details-container">
+            {/* Back navigation */}
             <Link to="/" className="back-link">
                 <FaArrowLeft /> Back to Results
             </Link>
 
             <div className="property-details-layout">
+                {/* Image gallery column */}
                 <div className="gallery-column">
                     <div className="gallery-sticky">
                         <ImageGallery
@@ -42,7 +48,9 @@ const PropertyDetails = () => {
                     </div>
                 </div>
 
+                {/* Details column */}
                 <div className="details-column">
+                    {/* Quick info card */}
                     <div className="property-quick-info">
                         <div className="quick-info-badges">
                             <span className="info-badge type-badge">
@@ -60,6 +68,7 @@ const PropertyDetails = () => {
                         </p>
                     </div>
 
+                    {/* Info tabs */}
                     <div className="info-tabs">
                         <Tabs>
                             <TabList style={{ overflowY: 'hidden' }}>
@@ -68,6 +77,7 @@ const PropertyDetails = () => {
                                 <Tab><FaMapMarkedAlt /> Map</Tab>
                             </TabList>
 
+                            {/* Description tab */}
                             <TabPanel>
                                 <div className="tab-content">
                                     <h3><FaFileAlt /> Property Description</h3>
@@ -79,6 +89,7 @@ const PropertyDetails = () => {
                                 </div>
                             </TabPanel>
 
+                            {/* Floor plan tab */}
                             <TabPanel>
                                 <div className="tab-content center-content">
                                     {property.floorPlan ? (
@@ -96,6 +107,7 @@ const PropertyDetails = () => {
                                 </div>
                             </TabPanel>
 
+                            {/* Map tab */}
                             <TabPanel>
                                 <div className="tab-content no-padding">
                                     {property.googleMap ? (

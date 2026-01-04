@@ -1,3 +1,6 @@
+/* Theme toggle button styles */
+
+/* Floating toggle button */
 .theme-toggle {
     position: fixed;
     bottom: 2rem;
@@ -15,16 +18,19 @@
     transition: background-color var(--transition-normal);
 }
 
+/* Button hover glow */
 .theme-toggle:hover {
     background-color: var(--primary-hover);
     box-shadow: var(--shadow-xl);
 }
 
+/* Mobile: hide floating button */
 @media (max-width: 600px) {
     .theme-toggle {
         display: none;
     }
 
+    /* Show in header instead */
     .header-theme-toggle .theme-toggle {
         display: flex;
     }

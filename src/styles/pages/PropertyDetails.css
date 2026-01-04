@@ -1,3 +1,6 @@
+/* Property details page styles */
+
+/* Main container */
 .property-details-container {
     width: 100%;
     max-width: 1600px;
@@ -6,6 +9,7 @@
     animation: fadeIn 0.4s ease-out;
 }
 
+/* Back navigation link */
 .back-link {
     display: inline-flex;
     align-items: center;
@@ -20,6 +24,7 @@
     border: 1px solid var(--border-color);
 }
 
+/* Back link hover */
 .back-link:hover {
     color: var(--primary);
     background: var(--bg-surface-elevated);
@@ -27,6 +32,7 @@
     box-shadow: var(--shadow-sm);
 }
 
+/* Two column layout */
 .property-details-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -34,10 +40,12 @@
     align-items: start;
 }
 
+/* Left gallery column */
 .gallery-column {
     position: relative;
 }
 
+/* Sticky gallery wrapper */
 .gallery-sticky {
     position: sticky;
     top: var(--spacing-xl);
@@ -47,21 +55,25 @@
     animation: slideInLeft 0.6s ease-out;
 }
 
+/* Gallery main image */
 .gallery-sticky .image-gallery-slide img {
     height: 500px;
     object-fit: cover;
     border-radius: 0;
 }
 
+/* Thumbnail styling */
 .gallery-sticky .image-gallery-thumbnail img {
     border-radius: var(--radius-sm);
 }
 
+/* Active thumbnail */
 .gallery-sticky .image-gallery-thumbnail.active,
 .gallery-sticky .image-gallery-thumbnail:hover {
     border-color: var(--primary);
 }
 
+/* Right details column */
 .details-column {
     display: flex;
     flex-direction: column;
@@ -69,6 +81,7 @@
     animation: slideInRight 0.6s ease-out;
 }
 
+/* Quick info card */
 .property-quick-info {
     background: var(--bg-surface);
     border-radius: var(--radius-xl);
@@ -78,6 +91,7 @@
     animation: fadeInUp 0.5s ease-out 0.1s backwards;
 }
 
+/* Badge container */
 .quick-info-badges {
     display: flex;
     flex-wrap: wrap;
@@ -85,6 +99,7 @@
     margin-bottom: var(--spacing-lg);
 }
 
+/* Info badge base */
 .info-badge {
     display: inline-flex;
     align-items: center;
@@ -96,22 +111,26 @@
     transition: all var(--transition-smooth);
 }
 
+/* Property type badge */
 .type-badge {
     background: linear-gradient(135deg, var(--primary), var(--primary-hover));
     color: white;
 }
 
+/* Bedroom count badge */
 .beds-badge {
     background: var(--bg-surface-elevated);
     color: var(--text-main);
     border: 1px solid var(--border-color);
 }
 
+/* Badge hover lift */
 .info-badge:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
 }
 
+/* Price display */
 .property-price {
     font-family: var(--font-body), sans-serif;
     font-size: clamp(2rem, 4vw, 2.75rem);
@@ -124,6 +143,7 @@
     line-height: 1.2;
 }
 
+/* Location text */
 .property-location {
     color: var(--text-muted);
     font-size: 1.1rem;
@@ -136,10 +156,12 @@
     color: var(--primary);
 }
 
+/* Tabs container */
 .info-tabs {
     animation: fadeInUp 0.5s ease-out 0.2s backwards;
 }
 
+/* Tab list styling */
 .react-tabs__tab-list {
     border-bottom: 2px solid var(--border-color) !important;
     margin-bottom: 0 !important;
@@ -151,6 +173,7 @@
     gap: var(--spacing-xs);
 }
 
+/* Individual tab */
 .react-tabs__tab {
     padding: var(--spacing-md) var(--spacing-lg) !important;
     background: transparent !important;
@@ -165,10 +188,12 @@
     gap: var(--spacing-sm);
 }
 
+/* Tab icon animation */
 .react-tabs__tab svg {
     transition: transform var(--transition-bounce);
 }
 
+/* Tab hover state */
 .react-tabs__tab:hover {
     color: var(--primary) !important;
     background-color: var(--bg-body) !important;
@@ -178,6 +203,7 @@
     transform: scale(1.15);
 }
 
+/* Active tab state */
 .react-tabs__tab--selected {
     color: white !important;
     background: var(--gradient-primary) !important;
@@ -187,6 +213,7 @@
     transform: scale(1.1);
 }
 
+/* Tab content panel */
 .tab-content {
     background: var(--bg-surface);
     padding: var(--spacing-xl);
@@ -198,11 +225,13 @@
     animation: fadeIn 0.3s ease-out;
 }
 
+/* No padding variant */
 .tab-content.no-padding {
     padding: 0;
     overflow: hidden;
 }
 
+/* Centered content variant */
 .tab-content.center-content {
     display: flex;
     flex-direction: column;
@@ -210,6 +239,7 @@
     justify-content: center;
 }
 
+/* Tab section heading */
 .tab-content h3 {
     font-family: var(--font-heading), sans-serif;
     font-size: 1.5rem;
@@ -226,6 +256,7 @@
     color: var(--primary);
 }
 
+/* Description paragraph */
 .description-text {
     font-size: 1.05rem;
     line-height: 1.8;
@@ -233,6 +264,7 @@
     margin-bottom: var(--spacing-xl);
 }
 
+/* Property metadata box */
 .property-meta {
     background: var(--bg-body);
     border-radius: var(--radius-lg);
@@ -252,11 +284,13 @@
     margin-bottom: 0;
 }
 
+/* Meta info icon */
 .info-icon {
     color: var(--primary);
     font-size: 0.9rem;
 }
 
+/* Floor plan image */
 .floor-plan-image {
     max-width: 100%;
     height: auto;
@@ -264,6 +298,7 @@
     box-shadow: var(--shadow-md);
 }
 
+/* Empty state message */
 .no-content-message {
     text-align: center;
     color: var(--text-muted);
@@ -280,8 +315,10 @@
     font-size: 1.1rem;
 }
 
-/* Tablet Landscape (1200px and below) */
+/* Tablet landscape */
 @media (max-width: 1200px) {
+
+    /* Stack to single column */
     .property-details-layout {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
@@ -300,7 +337,7 @@
     }
 }
 
-/* Tablet Portrait (992px and below) */
+/* Tablet portrait */
 @media (max-width: 992px) {
     .property-details-container {
         padding: var(--spacing-md);
@@ -328,21 +365,25 @@
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     .property-details-container {
         padding: var(--spacing-sm);
     }
 
+    /* Smaller back link */
     .back-link {
         padding: var(--spacing-xs) var(--spacing-sm);
         font-size: 0.9rem;
         margin-bottom: var(--spacing-md);
     }
 
+    /* Shorter gallery */
     .gallery-sticky .image-gallery-slide img {
         height: 280px;
     }
 
+    /* Hide thumbnails */
     .gallery-sticky .image-gallery-thumbnails-wrapper {
         display: none;
     }
@@ -352,6 +393,7 @@
         border-radius: var(--radius-lg);
     }
 
+    /* Center badges */
     .quick-info-badges {
         flex-direction: row;
         flex-wrap: wrap;
@@ -363,6 +405,7 @@
         padding: var(--spacing-xs) var(--spacing-sm);
     }
 
+    /* Center price */
     .property-price {
         font-size: 1.75rem;
         justify-content: center;
@@ -375,6 +418,7 @@
         text-align: center;
     }
 
+    /* Compact tabs */
     .react-tabs__tab-list {
         padding: var(--spacing-xs);
         border-radius: var(--radius-md) var(--radius-md) 0 0;
@@ -433,6 +477,7 @@
     }
 }
 
+/* Extra small mobile */
 @media (max-width: 480px) {
     .property-details-container {
         padding: var(--spacing-xs);
@@ -472,6 +517,7 @@
         font-size: 0.85rem;
     }
 
+    /* Tiny tabs */
     .react-tabs__tab {
         padding: var(--spacing-xs) var(--spacing-sm) !important;
         font-size: 0.75rem;
@@ -504,6 +550,7 @@
         flex-wrap: wrap;
     }
 
+    /* Shorter map iframe */
     .tab-content.no-padding iframe {
         height: 300px;
     }

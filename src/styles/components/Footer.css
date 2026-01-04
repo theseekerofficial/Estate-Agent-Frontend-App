@@ -1,3 +1,6 @@
+/* Footer component styles */
+
+/* Footer container */
 .footer {
     background-color: var(--bg-surface-elevated);
     border-top: 1px solid var(--border-color);
@@ -7,6 +10,7 @@
     position: relative;
 }
 
+/* Gradient top accent line */
 .footer::before {
     content: '';
     position: absolute;
@@ -18,6 +22,7 @@
     opacity: 0.5;
 }
 
+/* Grid layout for sections */
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -25,6 +30,7 @@
     padding-bottom: var(--spacing-2xl);
 }
 
+/* Staggered entrance animation */
 .footer-section {
     animation: fadeInUp 0.5s ease-out backwards;
 }
@@ -45,6 +51,7 @@
     animation-delay: 0.3s;
 }
 
+/* Section headings */
 .footer-section h4 {
     font-family: var(--font-heading), sans-serif;
     color: var(--text-main);
@@ -56,6 +63,7 @@
     display: inline-block;
 }
 
+/* Underline accent */
 .footer-section h4::after {
     content: '';
     position: absolute;
@@ -68,10 +76,12 @@
     transition: width var(--transition-smooth);
 }
 
+/* Expand underline on hover */
 .footer-section:hover h4::after {
     width: 100%;
 }
 
+/* Brand logo area */
 .footer-logo {
     display: flex;
     align-items: center;
@@ -90,6 +100,7 @@
     transform: scale(1.02);
 }
 
+/* Logo icon */
 .footer-logo img.logo-icon {
     width: 36px;
     height: 36px;
@@ -97,16 +108,19 @@
     transition: transform var(--transition-bounce);
 }
 
+/* Logo rotate on hover */
 .footer-logo:hover img.logo-icon {
     transform: rotate(-10deg) scale(1.1);
 }
 
+/* Brand description */
 .brand p {
     font-size: 0.9rem;
     max-width: 300px;
     line-height: 1.7;
 }
 
+/* Link lists */
 .links ul {
     list-style: none;
 }
@@ -115,12 +129,14 @@
     margin-bottom: var(--spacing-sm);
 }
 
+/* Link styling */
 .links a {
     transition: all var(--transition-fast);
     position: relative;
     display: inline-block;
 }
 
+/* Link underline animation */
 .links a::after {
     content: '';
     position: absolute;
@@ -132,6 +148,7 @@
     transition: width var(--transition-smooth);
 }
 
+/* Link hover effects */
 .links a:hover {
     color: var(--primary);
     transform: translateX(4px);
@@ -141,11 +158,13 @@
     width: 100%;
 }
 
+/* Social media icons */
 .social-icons {
     display: flex;
     gap: var(--spacing-md);
 }
 
+/* Social icon button */
 .social-icons a {
     display: flex;
     align-items: center;
@@ -159,6 +178,7 @@
     border: 1px solid var(--border-color);
 }
 
+/* Social icon hover lift */
 .social-icons a:hover {
     background-color: var(--primary);
     color: white;
@@ -167,6 +187,7 @@
     border-color: var(--primary);
 }
 
+/* Bottom copyright bar */
 .footer-bottom {
     background-color: var(--bg-surface);
     border-top: 1px solid var(--border-color);

@@ -1,3 +1,6 @@
+/* Property card component styles */
+
+/* Card container */
 .property-card {
     background-color: var(--bg-surface);
     border: 1px solid var(--border-color);
@@ -9,6 +12,7 @@
     will-change: transform;
 }
 
+/* Staggered entrance delays */
 .property-card:nth-child(1) {
     animation-delay: 0s;
 }
@@ -33,6 +37,7 @@
     animation-delay: 0.25s;
 }
 
+/* Shimmer overlay */
 .property-card::before {
     content: '';
     position: absolute;
@@ -48,17 +53,20 @@
     transition: opacity 0.3s ease;
 }
 
+/* Card hover lift */
 .property-card:hover {
     transform: translateY(-8px) scale(1.01);
     box-shadow: var(--shadow-xl), 0 0 0 1px var(--border-subtle);
     border-color: var(--primary);
 }
 
+/* Trigger shimmer on hover */
 .property-card:hover::before {
     opacity: 1;
     animation: shimmer 0.8s ease-out;
 }
 
+/* Favorite button overlay */
 .fav-btn {
     position: absolute;
     top: var(--spacing-md);
@@ -79,37 +87,44 @@
     border: 1px solid var(--border-subtle);
 }
 
+/* Favorite button hover */
 .fav-btn:hover {
     transform: scale(1.15);
     box-shadow: var(--shadow-lg);
     background: var(--bg-surface);
 }
 
+/* Favorite button press */
 .fav-btn:active {
     transform: scale(0.95);
 }
 
+/* Heart icon base */
 .fav-icon {
     color: var(--text-muted);
     font-size: 1.15rem;
     transition: all var(--transition-bounce);
 }
 
+/* Filled heart state */
 .fav-icon.filled {
     color: #ef4444;
     animation: pulse 0.4s ease;
 }
 
+/* Heart hover preview */
 .fav-btn:hover .fav-icon:not(.filled) {
     color: #ef4444;
     transform: scale(1.1);
 }
 
+/* Image wrapper */
 .property-image-container {
     overflow: hidden;
     position: relative;
 }
 
+/* Bottom gradient fade */
 .property-image-container::after {
     content: '';
     position: absolute;
@@ -123,10 +138,12 @@
     pointer-events: none;
 }
 
+/* Show gradient on hover */
 .property-card:hover .property-image-container::after {
     opacity: 1;
 }
 
+/* Property image */
 .property-image {
     width: 100%;
     height: 220px;
@@ -135,15 +152,18 @@
     transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
+/* Zoom image on hover */
 .property-card:hover .property-image {
     transform: scale(1.08);
 }
 
+/* Card info section */
 .property-info {
     padding: var(--spacing-lg);
     position: relative;
 }
 
+/* Property title */
 .property-info h3 {
     font-family: var(--font-heading), sans-serif;
     margin-bottom: var(--spacing-xs);
@@ -154,10 +174,12 @@
     transition: color var(--transition-fast);
 }
 
+/* Title color on hover */
 .property-card:hover .property-info h3 {
     color: var(--primary);
 }
 
+/* Price display */
 .price {
     color: var(--primary);
     font-size: 1.25rem;
@@ -168,6 +190,7 @@
     gap: var(--spacing-xs);
 }
 
+/* View details button */
 .view-details-btn {
     display: inline-flex;
     align-items: center;
@@ -185,6 +208,7 @@
     overflow: hidden;
 }
 
+/* Button gradient fill */
 .view-details-btn::before {
     content: '';
     position: absolute;
@@ -197,6 +221,7 @@
     z-index: -1;
 }
 
+/* Button hover state */
 .view-details-btn:hover {
     background-color: var(--primary);
     border-color: var(--primary);
@@ -205,10 +230,12 @@
     box-shadow: var(--shadow-md);
 }
 
+/* Slide in fill */
 .view-details-btn:hover::before {
     left: 0;
 }
 
+/* Button press reset */
 .view-details-btn:active {
     transform: translateY(0);
 }
