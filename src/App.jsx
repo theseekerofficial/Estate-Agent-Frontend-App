@@ -55,7 +55,7 @@ function App() {
     );
 }
 
-// Favicon link: https://www.flaticon.com/free-icons/real-estate-agent
+// Favicon link: https://www.flaticon.com/free-icon/deal_13075502
 // Images from free to use sites: https://pexels.com, https://unsplash.com
 
 export default App;
