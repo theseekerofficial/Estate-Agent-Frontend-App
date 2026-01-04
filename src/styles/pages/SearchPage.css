@@ -80,7 +80,7 @@
 .favorites-header h2 {
     font-size: 1.25rem;
     color: var(--text-main);
-    font-family: var(--font-heading);
+    font-family: var(--font-heading), sans-serif;
     font-style: italic;
 }
 
@@ -158,5 +158,44 @@
 
     .search-results-section h1 {
         font-size: 2rem;
+    }
+
+    .property-list-grid {
+        touch-action: pan-y;
+    }
+
+    .favorites-sidebar-content {
+        border-style: solid;
+    }
+
+    .favorites-placeholder {
+        padding: var(--spacing-lg);
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-card {
+        touch-action: pan-y;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .favorites-sidebar-content {
+        padding: var(--spacing-md);
+        min-height: 200px;
+    }
+
+    .favorites-header {
+        margin-bottom: var(--spacing-md);
+    }
+
+    .favorites-header h2 {
+        font-size: 1.1rem;
+    }
+
+    .fav-btn {
+        width: 48px;
+        height: 48px;
     }
 }

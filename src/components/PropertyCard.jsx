@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/components/PropertyCard.css';
 import { Link } from 'react-router-dom';
 import { Draggable } from '@hello-pangea/dnd';
@@ -8,11 +8,22 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const PropertyCard = ({ property, index, isFavoriteItem }) => {
     const { addFavorite, removeFavorite, favorites } = useFavorites();
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     const isFav = favorites.some(fav => fav.id === property.id);
 
     const toggleFavorite = (e) => {
         e.preventDefault();
+        e.stopPropagation();
         if (isFav) {
             removeFavorite(property.id);
         } else {
@@ -23,14 +34,14 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
     const draggableId = isFavoriteItem ? `fav-${property.id}` : property.id;
 
     return (
-        <Draggable draggableId={draggableId} index={index}>
+        <Draggable draggableId={draggableId} index={index} isDragDisabled={isMobile}>
             {(provided, snapshot) => (
                 <DraggablePortal snapshot={snapshot}>
                     <div
                         className="property-card"
                         ref={provided.innerRef}
                         {...provided.draggableProps}
-                        {...provided.dragHandleProps}
+                        {...(isMobile ? {} : provided.dragHandleProps)}
                         style={{
                             ...provided.draggableProps.style,
                             ...(snapshot.isDragging && {
@@ -41,7 +52,7 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
                         <button
                             className="fav-btn"
                             onClick={toggleFavorite}
-                            title={isFav ? "Remove" : "Add"}
+                            title={isFav ? "Remove from favorites" : "Add to favorites"}
                         >
                             {isFav ? <FaHeart className="fav-icon filled" /> : <FaRegHeart className="fav-icon" />}
                         </button>
