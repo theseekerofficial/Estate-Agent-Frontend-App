@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/components/PropertyCard.css';
 import { Link } from 'react-router-dom';
 import { Draggable } from '@hello-pangea/dnd';
@@ -8,16 +8,6 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 
 const PropertyCard = ({ property, index, isFavoriteItem }) => {
     const { addFavorite, removeFavorite, favorites } = useFavorites();
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window);
-        };
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
 
     const isFav = favorites.some(fav => fav.id === property.id);
 
@@ -34,14 +24,14 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
     const draggableId = isFavoriteItem ? `fav-${property.id}` : property.id;
 
     return (
-        <Draggable draggableId={draggableId} index={index} isDragDisabled={isMobile}>
+        <Draggable draggableId={draggableId} index={index}>
             {(provided, snapshot) => (
                 <DraggablePortal snapshot={snapshot}>
                     <div
-                        className="property-card"
+                        className={`property-card ${snapshot.isDragging ? 'is-dragging' : ''}`}
                         ref={provided.innerRef}
                         {...provided.draggableProps}
-                        {...(isMobile ? {} : provided.dragHandleProps)}
+                        {...provided.dragHandleProps}
                         style={{
                             ...provided.draggableProps.style,
                             ...(snapshot.isDragging && {
@@ -52,6 +42,7 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
                         <button
                             className="fav-btn"
                             onClick={toggleFavorite}
+                            onTouchEnd={toggleFavorite}
                             title={isFav ? "Remove from favorites" : "Add to favorites"}
                         >
                             {isFav ? <FaHeart className="fav-icon filled" /> : <FaRegHeart className="fav-icon" />}
@@ -62,6 +53,7 @@ const PropertyCard = ({ property, index, isFavoriteItem }) => {
                                 src={property.picture}
                                 alt={property.type}
                                 className="property-image"
+                                draggable={false}
                                 onError={(e) => { e.target.src = 'https://placehold.co/600x400?text=No+Image' }}
                             />
                         </div>
